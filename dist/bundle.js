@@ -76,14 +76,21 @@
 	var React = __webpack_require__(1);
 	var TnxBtn_1 = __webpack_require__(4);
 	var SryBtn_1 = __webpack_require__(5);
-	var Image_1 = __webpack_require__(6);
+	var Images_1 = __webpack_require__(6);
+	var data = [
+	    { id: 1, img: "img/img1.jpg" },
+	    { id: 2, img: "img/img2.jpg" },
+	    { id: 3, img: "img/img3.jpg" },
+	    { id: 4, img: "img/img4.jpg" },
+	    { id: 5, img: "img/img5.jpg" }
+	];
 	var Main = (function (_super) {
 	    __extends(Main, _super);
 	    function Main() {
 	        _super.apply(this, arguments);
 	    }
 	    Main.prototype.render = function () {
-	        return (React.createElement("article", null, React.createElement("main", null, "はじめまして!"), React.createElement("br", null), React.createElement(Image_1.Image, {compiler: "TypeScript", framework: "React"}), React.createElement("section", {id: "btn-sec"}, React.createElement(SryBtn_1.SryBtn, {compiler: "TypeScript", framework: "React"}), React.createElement(TnxBtn_1.TnxBtn, {compiler: "TypeScript", framework: "React"}))));
+	        return (React.createElement("article", null, React.createElement("main", null, "はじめまして!"), React.createElement("br", null), React.createElement(Images_1.Images, {data: data}), React.createElement("section", {id: "btn-sec"}, React.createElement(SryBtn_1.SryBtn, {compiler: "TypeScript", framework: "React"}), React.createElement(TnxBtn_1.TnxBtn, {compiler: "TypeScript", framework: "React"}))));
 	    };
 	    return Main;
 	}(React.Component));
@@ -149,24 +156,50 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var data = [
-	    { id: 1, img: "img/img1.jpg" },
-	    { id: 2, img: "img/img2.jpg" },
-	    { id: 3, img: "img/img3.jpg" },
-	    { id: 4, img: "img/img4.jpg" },
-	    { id: 5, img: "img/img5.jpg" }
-	];
+	var Image_1 = __webpack_require__(7);
+	var Images = (function (_super) {
+	    __extends(Images, _super);
+	    function Images() {
+	        _super.apply(this, arguments);
+	    }
+	    Images.prototype.render = function () {
+	        for (var i = 0; i < this.props.data.length; i++) {
+	            return (React.createElement(Image_1.Image, {id: this.props.data[i].id, img: this.props.data[i].img}));
+	        }
+	    };
+	    return Images;
+	}(React.Component));
+	exports.Images = Images;
+	// a = data.map(function(value){
+	//   return <Image id="1" img="dfd"/>
+	// })
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
 	var Image = (function (_super) {
 	    __extends(Image, _super);
 	    function Image() {
 	        _super.apply(this, arguments);
 	    }
 	    Image.prototype.render = function () {
-	        return (React.createElement("img", {src: 'img/ex1.png'}));
+	        return (React.createElement("img", {src: this.props.img}));
 	    };
 	    return Image;
 	}(React.Component));
 	exports.Image = Image;
+	// a = data.map(function(value){
+	//   return <Image id="1" img="dfd"/>
+	// })
 
 
 /***/ }

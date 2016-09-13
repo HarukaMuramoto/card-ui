@@ -12,7 +12,8 @@
         "./src/components/Main.tsx",
         "./src/components/TnxBtn.tsx",
         "./src/components/SryBtn.tsx",
-        "./src/components/Image.tsx",
+        "./src/components/Images.tsx",
+        "./src/components/Image.tsx",        
         "./src/index.tsx"
 
     ]

@@ -5,17 +5,16 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var React = require("react");
-var a;
-var b = ["asfg"];
-var Image = (function (_super) {
-    __extends(Image, _super);
-    function Image() {
+var Image_1 = require("./Image");
+var Images = (function (_super) {
+    __extends(Images, _super);
+    function Images() {
         _super.apply(this, arguments);
     }
-    Image.prototype.render = function () {
-        return (React.createElement("img", {src: this.props.img}));
+    Images.prototype.render = function () {
+        return (React.createElement(Image_1.Image, {id: this.props.data[i].id, img: this.props.data[i].img}));
     };
-    return Image;
+    return Images;
 }(React.Component));
-exports.Image = Image;
-//# sourceMappingURL=Image.js.map
+exports.Images = Images;
+//# sourceMappingURL=Images.js.map
