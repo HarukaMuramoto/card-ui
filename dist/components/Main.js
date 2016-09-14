@@ -22,7 +22,9 @@ var Main = (function (_super) {
         this.state = { index: 0 };
     }
     Main.prototype.changeCard = function () {
-        this.state.index = this.state.index + 1;
+        this.setState({
+            index: this.state.index + 1
+        });
         return this.state.index;
     };
     Main.prototype.render = function () {

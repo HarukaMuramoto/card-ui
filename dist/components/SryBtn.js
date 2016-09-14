@@ -12,7 +12,7 @@ var SryBtn = (function (_super) {
     }
     SryBtn.prototype.render = function () {
         return (React.createElement("span", null, 
-            React.createElement("button", {class: "btn", id: "sry-btn", onClick: "changeCard();"}, "sorry")
+            React.createElement("button", {class: "btn", id: "sry-btn", onClick: this.props.func}, "sorry")
         ));
     };
     return SryBtn;

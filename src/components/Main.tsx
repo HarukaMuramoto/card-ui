@@ -29,7 +29,11 @@ export class Main extends React.Component<MainProps, MainState> {
     this.state = {index: 0}
   }
  changeCard() {
-    this.state.index = this.state.index + 1;
+
+    this.setState({
+      index: this.state.index + 1
+    });
+    // console.log(this.state.index);
     return this.state.index;
   }
 

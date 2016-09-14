@@ -91,7 +91,10 @@
 	        this.state = { index: 0 };
 	    }
 	    Main.prototype.changeCard = function () {
-	        this.state.index = this.state.index + 1;
+	        this.setState({
+	            index: this.state.index + 1
+	        });
+	        // console.log(this.state.index);
 	        return this.state.index;
 	    };
 	    Main.prototype.render = function () {
@@ -144,7 +147,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    SryBtn.prototype.render = function () {
-	        return (React.createElement("span", null, React.createElement("button", {class: "btn", id: "sry-btn", onClick: "changeCard();"}, "sorry")));
+	        return (React.createElement("span", null, React.createElement("button", {class: "btn", id: "sry-btn", onClick: this.props.func}, "sorry")));
 	    };
 	    return SryBtn;
 	}(React.Component));
@@ -169,6 +172,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    CardList.prototype.render = function () {
+	        console.log(this.props.index);
 	        return (React.createElement(Card_1.Card, {frontid: this.props.data[this.props.index].id, frontimg: this.props.data[this.props.index].img, backid: this.props.data[this.props.index + 1].id, backimg: this.props.data[this.props.index + 1].img}));
 	    };
 	    return CardList;
