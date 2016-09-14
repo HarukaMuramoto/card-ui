@@ -1,7 +1,10 @@
 import * as React from "react";
 import { TnxBtn } from "./TnxBtn";
 import { SryBtn } from "./SryBtn";
-import { Images } from "./Images";
+import { CardList } from "./CardList";
+
+
+
 
 var data = [
   {id:1, img:"img/img1.jpg"},
@@ -18,14 +21,27 @@ var data = [
   // })
 export interface MainProps { compiler: string; framework: string; }
 
-export class Main extends React.Component<MainProps, {}> {
+interface MainState { index:number;  }
+
+export class Main extends React.Component<MainProps, MainState> {
+  constructor() {
+    super()
+    this.state = {index: 0}
+  }
+ changeCard() {
+    this.state.index = this.state.index + 1;
+    return this.state.index;
+  }
+
     render() {
+
+       this.state.index = 0;
         return (
           <article>
           <main>はじめまして!</main><br />
-          <Images data={data} />
+          <CardList data={data} index={this.state.index} />
           <section id="btn-sec">
-          <SryBtn compiler="TypeScript" framework="React" />
+          <SryBtn func={this.changeCard.bind(this)} />
           <TnxBtn compiler="TypeScript" framework="React" />
           </section>
           </article>
