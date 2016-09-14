@@ -18,4 +18,4 @@ var Card = (function (_super) {
     return Card;
 }(React.Component));
 exports.Card = Card;
-//# sourceMappingURL=Image.js.map
+//# sourceMappingURL=Card.js.map

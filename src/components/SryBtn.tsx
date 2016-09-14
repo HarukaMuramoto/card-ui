@@ -1,12 +1,17 @@
 import * as React from "react";
+import { CardList } from "./CardList";
 
-export interface SryBtnProps { compiler: string; framework: string; }
+
+export interface SryBtnProps {
+  func:(index:number) =>{};
+}
+
 
 export class SryBtn extends React.Component<SryBtnProps, {}> {
     render() {
         return (
           <span>
-            <button class="btn" id="sry-btn">sorry</button>
+            <button class="btn" id="sry-btn" onClick="changeCard();">sorry</button>
           </span>
         );
     }

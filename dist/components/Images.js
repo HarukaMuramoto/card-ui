@@ -12,7 +12,7 @@ var Images = (function (_super) {
         _super.apply(this, arguments);
     }
     Images.prototype.render = function () {
-        return (React.createElement(Image_1.Image, {id: this.props.data[i].id, img: this.props.data[i].img}));
+        return (React.createElement(Image_1.Image, {frontid: this.props.data[1].id, frontimg: this.props.data[1].img, backid: this.props.data[0].id, backimg: this.props.data[0].img}));
     };
     return Images;
 }(React.Component));

@@ -76,7 +76,7 @@
 	var React = __webpack_require__(1);
 	var TnxBtn_1 = __webpack_require__(4);
 	var SryBtn_1 = __webpack_require__(5);
-	var Images_1 = __webpack_require__(6);
+	var CardList_1 = __webpack_require__(6);
 	var data = [
 	    { id: 1, img: "img/img1.jpg" },
 	    { id: 2, img: "img/img2.jpg" },
@@ -87,10 +87,16 @@
 	var Main = (function (_super) {
 	    __extends(Main, _super);
 	    function Main() {
-	        _super.apply(this, arguments);
+	        _super.call(this);
+	        this.state = { index: 0 };
 	    }
+	    Main.prototype.changeCard = function () {
+	        this.state.index = this.state.index + 1;
+	        return this.state.index;
+	    };
 	    Main.prototype.render = function () {
-	        return (React.createElement("article", null, React.createElement("main", null, "はじめまして!"), React.createElement("br", null), React.createElement(Images_1.Images, {data: data}), React.createElement("section", {id: "btn-sec"}, React.createElement(SryBtn_1.SryBtn, {compiler: "TypeScript", framework: "React"}), React.createElement(TnxBtn_1.TnxBtn, {compiler: "TypeScript", framework: "React"}))));
+	        this.state.index = 0;
+	        return (React.createElement("article", null, React.createElement("main", null, "はじめまして!"), React.createElement("br", null), React.createElement(CardList_1.CardList, {data: data, index: this.state.index}), React.createElement("section", {id: "btn-sec"}, React.createElement(SryBtn_1.SryBtn, {func: this.changeCard.bind(this)}), React.createElement(TnxBtn_1.TnxBtn, {compiler: "TypeScript", framework: "React"}))));
 	    };
 	    return Main;
 	}(React.Component));
@@ -138,7 +144,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    SryBtn.prototype.render = function () {
-	        return (React.createElement("span", null, React.createElement("button", {class: "btn", id: "sry-btn"}, "sorry")));
+	        return (React.createElement("span", null, React.createElement("button", {class: "btn", id: "sry-btn", onClick: "changeCard();"}, "sorry")));
 	    };
 	    return SryBtn;
 	}(React.Component));
@@ -156,20 +162,18 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var Image_1 = __webpack_require__(7);
-	var Images = (function (_super) {
-	    __extends(Images, _super);
-	    function Images() {
+	var Card_1 = __webpack_require__(7);
+	var CardList = (function (_super) {
+	    __extends(CardList, _super);
+	    function CardList() {
 	        _super.apply(this, arguments);
 	    }
-	    Images.prototype.render = function () {
-	        for (var i = 0; i < this.props.data.length; i++) {
-	            return (React.createElement(Image_1.Image, {id: this.props.data[i].id, img: this.props.data[i].img}));
-	        }
+	    CardList.prototype.render = function () {
+	        return (React.createElement(Card_1.Card, {frontid: this.props.data[this.props.index].id, frontimg: this.props.data[this.props.index].img, backid: this.props.data[this.props.index + 1].id, backimg: this.props.data[this.props.index + 1].img}));
 	    };
-	    return Images;
+	    return CardList;
 	}(React.Component));
-	exports.Images = Images;
+	exports.CardList = CardList;
 	// a = data.map(function(value){
 	//   return <Image id="1" img="dfd"/>
 	// })
@@ -186,17 +190,17 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var Image = (function (_super) {
-	    __extends(Image, _super);
-	    function Image() {
+	var Card = (function (_super) {
+	    __extends(Card, _super);
+	    function Card() {
 	        _super.apply(this, arguments);
 	    }
-	    Image.prototype.render = function () {
-	        return (React.createElement("img", {src: this.props.img}));
+	    Card.prototype.render = function () {
+	        return (React.createElement("div", null, React.createElement("img", {src: this.props.frontimg}), React.createElement("img", {src: this.props.backimg})));
 	    };
-	    return Image;
+	    return Card;
 	}(React.Component));
-	exports.Image = Image;
+	exports.Card = Card;
 	// a = data.map(function(value){
 	//   return <Image id="1" img="dfd"/>
 	// })

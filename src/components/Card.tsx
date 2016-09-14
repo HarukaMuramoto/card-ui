@@ -1,14 +1,14 @@
 import * as React from "react";
 
 
-export interface ImageProps {
+export interface CardProps {
   frontid:number;
   backid:number;
   frontimg:string;
   backimg:string;
 }
 
-export class Image extends React.Component<ImageProps, {}> {
+export class Card extends React.Component<CardProps, {}> {
 
     render() {
         return (
