@@ -94,12 +94,12 @@
 	        this.setState({
 	            index: this.state.index + 1
 	        });
-	        // console.log(this.state.index);
+	        console.log(this.state.index);
 	        return this.state.index;
 	    };
 	    Main.prototype.render = function () {
-	        this.state.index = 0;
-	        return (React.createElement("article", null, React.createElement("main", null, "はじめまして!"), React.createElement("br", null), React.createElement(CardList_1.CardList, {data: data, index: this.state.index}), React.createElement("section", {id: "btn-sec"}, React.createElement(SryBtn_1.SryBtn, {func: this.changeCard.bind(this)}), React.createElement(TnxBtn_1.TnxBtn, {compiler: "TypeScript", framework: "React"}))));
+	        //  this.state.index = 0;
+	        return (React.createElement("article", null, React.createElement(CardList_1.CardList, {data: data, index: this.state.index}), React.createElement("section", {id: "btn-sec"}, React.createElement(SryBtn_1.SryBtn, {func: this.changeCard.bind(this)}), React.createElement(TnxBtn_1.TnxBtn, {compiler: "TypeScript", framework: "React"}))));
 	    };
 	    return Main;
 	}(React.Component));
@@ -123,7 +123,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    TnxBtn.prototype.render = function () {
-	        return (React.createElement("span", null, React.createElement("button", {class: "btn", id: "tnx-btn"}, "thanks")));
+	        return (React.createElement("span", null, React.createElement("button", {className: "btn", id: "tnx-btn"}, "thanks")));
 	    };
 	    return TnxBtn;
 	}(React.Component));
@@ -147,7 +147,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    SryBtn.prototype.render = function () {
-	        return (React.createElement("span", null, React.createElement("button", {class: "btn", id: "sry-btn", onClick: this.props.func}, "sorry")));
+	        return (React.createElement("span", null, React.createElement("button", {className: "btn", id: "sry-btn", onClick: this.props.func}, "sorry")));
 	    };
 	    return SryBtn;
 	}(React.Component));
@@ -172,7 +172,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    CardList.prototype.render = function () {
-	        console.log(this.props.index);
+	        // console.log(this.props.index);
 	        return (React.createElement(Card_1.Card, {frontid: this.props.data[this.props.index].id, frontimg: this.props.data[this.props.index].img, backid: this.props.data[this.props.index + 1].id, backimg: this.props.data[this.props.index + 1].img}));
 	    };
 	    return CardList;
@@ -200,7 +200,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    Card.prototype.render = function () {
-	        return (React.createElement("div", null, React.createElement("img", {src: this.props.frontimg}), React.createElement("img", {src: this.props.backimg})));
+	        return (React.createElement("div", null, React.createElement("img", {className: "front-img", src: this.props.frontimg}), React.createElement("img", {className: "back-img", src: this.props.backimg})));
 	    };
 	    return Card;
 	}(React.Component));

@@ -33,16 +33,15 @@ export class Main extends React.Component<MainProps, MainState> {
     this.setState({
       index: this.state.index + 1
     });
-    // console.log(this.state.index);
+    console.log(this.state.index);
     return this.state.index;
   }
 
     render() {
 
-       this.state.index = 0;
+      //  this.state.index = 0;
         return (
           <article>
-          <main>はじめまして!</main><br />
           <CardList data={data} index={this.state.index} />
           <section id="btn-sec">
           <SryBtn func={this.changeCard.bind(this)} />

@@ -6,7 +6,7 @@ export class TnxBtn extends React.Component<TnxBtnProps, {}> {
     render() {
         return (
           <span>
-            <button class="btn" id="tnx-btn">thanks</button>
+            <button className="btn" id="tnx-btn">thanks</button>
           </span>
         );
     }

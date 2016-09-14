@@ -11,7 +11,7 @@ export class SryBtn extends React.Component<SryBtnProps, {}> {
     render() {
         return (
           <span>
-            <button class="btn" id="sry-btn" onClick={this.props.func}>sorry</button>
+            <button className="btn" id="sry-btn" onClick={this.props.func}>sorry</button>
           </span>
         );
     }

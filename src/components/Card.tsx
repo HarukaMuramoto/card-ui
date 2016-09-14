@@ -13,8 +13,8 @@ export class Card extends React.Component<CardProps, {}> {
     render() {
         return (
           <div>
-          <img src={this.props.frontimg} />
-          <img src={this.props.backimg} />
+          <img className="front-img" src={this.props.frontimg} />
+          <img className="back-img" src={this.props.backimg} />
           </div>
         );
     }

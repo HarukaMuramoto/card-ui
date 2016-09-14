@@ -12,8 +12,8 @@ var Card = (function (_super) {
     }
     Card.prototype.render = function () {
         return (React.createElement("div", null, 
-            React.createElement("img", {src: this.props.frontimg}), 
-            React.createElement("img", {src: this.props.backimg})));
+            React.createElement("img", {className: "front-img", src: this.props.frontimg}), 
+            React.createElement("img", {className: "back-img", src: this.props.backimg})));
     };
     return Card;
 }(React.Component));

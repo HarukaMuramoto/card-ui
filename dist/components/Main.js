@@ -25,13 +25,11 @@ var Main = (function (_super) {
         this.setState({
             index: this.state.index + 1
         });
+        console.log(this.state.index);
         return this.state.index;
     };
     Main.prototype.render = function () {
-        this.state.index = 0;
         return (React.createElement("article", null, 
-            React.createElement("main", null, "はじめまして!"), 
-            React.createElement("br", null), 
             React.createElement(CardList_1.CardList, {data: data, index: this.state.index}), 
             React.createElement("section", {id: "btn-sec"}, 
                 React.createElement(SryBtn_1.SryBtn, {func: this.changeCard.bind(this)}), 

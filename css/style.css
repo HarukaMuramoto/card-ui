@@ -3,12 +3,11 @@ article {
   margin-top: 10%;
 }
 
-/*img {
+img {
   width: 350px;
   height: 350px;
-  border: 3px rgb(177, 235, 178) solid;
-  border-radius: 10px;
-}*/
+  border-radius: 5px;
+}
 main {
   font-size: 20px;
   width: 350px;
@@ -35,4 +34,8 @@ main {
   border: 2px rgb(168, 173, 166) solid;
   border-radius: 80px;
   background-color: rgb(240, 175, 196);
+}
+
+.back-img {
+  position: relative;
 }
