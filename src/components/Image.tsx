@@ -2,15 +2,20 @@ import * as React from "react";
 
 
 export interface ImageProps {
-  id:number;
-  img:string;
+  frontid:number;
+  backid:number;
+  frontimg:string;
+  backimg:string;
 }
 
 export class Image extends React.Component<ImageProps, {}> {
 
     render() {
         return (
-          <img src={this.props.img} />
+          <div>
+          <img src={this.props.frontimg} />
+          <img src={this.props.backimg} />
+          </div>
         );
     }
 }
