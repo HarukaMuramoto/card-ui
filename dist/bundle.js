@@ -203,7 +203,7 @@
 	    }
 	    CardList.prototype.render = function () {
 	        // console.log(this.props.index);
-	        return (React.createElement(Card_1.Card, {cardname: this.props.data[this.props.index].name, cardage: this.props.data[this.props.index].age, cardpref: this.props.data[this.props.index].pref, cardmsg: this.props.data[this.props.index].msg, cardjob: this.props.data[this.props.index].job, cardheight: this.props.data[this.props.index].height, class: this.props.left, frontid: this.props.data[this.props.index].id, frontimg: this.props.data[this.props.index].img, backid: this.props.data[this.props.index + 1].id, backimg: this.props.data[this.props.index + 1].img}));
+	        return (React.createElement(Card_1.Card, {cardname: this.props.data[this.props.index].name, cardage: this.props.data[this.props.index].age, cardpref: this.props.data[this.props.index].pref, cardmsg: this.props.data[this.props.index].msg, cardjob: this.props.data[this.props.index].job, cardheight: this.props.data[this.props.index].height, precardname: this.props.data[this.props.index + 1].name, precardage: this.props.data[this.props.index + 1].age, precardpref: this.props.data[this.props.index + 1].pref, precardmsg: this.props.data[this.props.index + 1].msg, precardjob: this.props.data[this.props.index + 1].job, precardheight: this.props.data[this.props.index + 1].height, class: this.props.left, frontid: this.props.data[this.props.index].id, frontimg: this.props.data[this.props.index].img, backid: this.props.data[this.props.index + 1].id, backimg: this.props.data[this.props.index + 1].img}));
 	    };
 	    return CardList;
 	}(React.Component));
@@ -230,7 +230,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    Card.prototype.render = function () {
-	        return (React.createElement("div", null, React.createElement("img", {className: "back-img", src: this.props.backimg}), React.createElement("div", {className: "front-img " + this.props.class}, React.createElement("img", {src: this.props.frontimg}), React.createElement("article", {className: "card-contents"}, this.props.cardname, ":", this.props.cardage, ":", this.props.cardpref))));
+	        return (React.createElement("div", null, React.createElement("div", null, React.createElement("img", {className: "back-img", src: this.props.backimg}), React.createElement("article", {className: "backcard-contents"}, this.props.precardname, ":", this.props.precardage, ":", this.props.precardpref)), React.createElement("div", {className: "front-img " + this.props.class}, React.createElement("img", {src: this.props.frontimg}), React.createElement("article", {className: "card-contents"}, this.props.cardname, ":", this.props.cardage, ":", this.props.cardpref))));
 	    };
 	    return Card;
 	}(React.Component));

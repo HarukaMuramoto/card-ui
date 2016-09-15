@@ -19,6 +19,12 @@ export class CardList extends React.Component<CardListProps, {}> {
                     cardmsg={this.props.data[this.props.index].msg}
                     cardjob={this.props.data[this.props.index].job}
                     cardheight={this.props.data[this.props.index].height}
+                    precardname={this.props.data[this.props.index + 1].name}
+                    precardage={this.props.data[this.props.index + 1].age}
+                    precardpref={this.props.data[this.props.index + 1].pref}
+                    precardmsg={this.props.data[this.props.index + 1].msg}
+                    precardjob={this.props.data[this.props.index + 1].job}
+                    precardheight={this.props.data[this.props.index + 1].height}
                     class={this.props.left}
                     frontid={this.props.data[this.props.index].id}
                     frontimg={this.props.data[this.props.index].img}

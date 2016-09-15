@@ -13,6 +13,12 @@ export interface CardProps {
   cardmsg:string;
   cardjob:string;
   cardheight:string;
+  precardname:string;
+  precardage:string;
+  precardpref:string;
+  precardmsg:string;
+  precardjob:string;
+  precardheight:string;
 
 }
 
@@ -21,8 +27,12 @@ export class Card extends React.Component<CardProps, {}> {
     render() {
         return (
           <div>
-            <img className="back-img" src={this.props.backimg} />
-            
+            <div>
+              <img className="back-img" src={this.props.backimg} />
+              <article className="backcard-contents">
+              {this.props.precardname}:{this.props.precardage}:{this.props.precardpref}
+              </article>
+            </div>
             <div className={"front-img " + this.props.class} >
               <img src={this.props.frontimg}/>
               <article className="card-contents">
