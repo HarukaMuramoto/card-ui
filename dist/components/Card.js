@@ -15,7 +15,12 @@ var Card = (function (_super) {
             React.createElement("img", {className: "back-img", src: this.props.backimg}), 
             React.createElement("div", {className: "front-img " + this.props.class}, 
                 React.createElement("img", {src: this.props.frontimg}), 
-                React.createElement("article", {className: "card-contents"}))));
+                React.createElement("article", {className: "card-contents"}, 
+                    this.props.cardname, 
+                    ":", 
+                    this.props.cardage, 
+                    ":", 
+                    this.props.cardpref))));
     };
     return Card;
 }(React.Component));

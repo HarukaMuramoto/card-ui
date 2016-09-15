@@ -2,6 +2,9 @@ html {
   text-align: center;
   background-color: rgba(167, 240, 217, 0.79);
 }
+#example {
+  text-align: center;
+}
 
 .main-bg {
   text-align: center;
@@ -52,6 +55,7 @@ main {
 
 .front-img {
   position: relative;
+  text-align: center;
 }
 @keyframes left {
   0% {
@@ -81,4 +85,13 @@ main {
 .shift-right {
   transform-origin: right bottom;
   animation: right 1.0s linear;
+}
+
+.card-contents {
+  position: relative;
+  top: -45px;
+  right: -5px;
+  width: 350px;
+  height: 40px;
+  background-color: rgba(152, 147, 140, 0.68);
 }

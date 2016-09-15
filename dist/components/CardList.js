@@ -12,7 +12,7 @@ var CardList = (function (_super) {
         _super.apply(this, arguments);
     }
     CardList.prototype.render = function () {
-        return (React.createElement(Card_1.Card, {class: this.props.left, frontid: this.props.data[this.props.index].id, frontimg: this.props.data[this.props.index].img, backid: this.props.data[this.props.index + 1].id, backimg: this.props.data[this.props.index + 1].img}));
+        return (React.createElement(Card_1.Card, {cardname: this.props.data[this.props.index].name, cardage: this.props.data[this.props.index].age, cardpref: this.props.data[this.props.index].pref, cardmsg: this.props.data[this.props.index].msg, cardjob: this.props.data[this.props.index].job, cardheight: this.props.data[this.props.index].height, class: this.props.left, frontid: this.props.data[this.props.index].id, frontimg: this.props.data[this.props.index].img, backid: this.props.data[this.props.index + 1].id, backimg: this.props.data[this.props.index + 1].img}));
     };
     return CardList;
 }(React.Component));
