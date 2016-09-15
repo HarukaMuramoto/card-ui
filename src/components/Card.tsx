@@ -6,6 +6,7 @@ export interface CardProps {
   backid:number;
   frontimg:string;
   backimg:string;
+  class:string;
 }
 
 export class Card extends React.Component<CardProps, {}> {
@@ -13,8 +14,12 @@ export class Card extends React.Component<CardProps, {}> {
     render() {
         return (
           <div>
-          <img className="front-img" src={this.props.frontimg} />
-          <img className="back-img" src={this.props.backimg} />
+            <img className="back-img" src={this.props.backimg} />
+            <div className={"front-img " + this.props.class} >
+              <img src={this.props.frontimg}/>
+              <article className="card-contents">
+              </article>
+            </div>
           </div>
         );
     }

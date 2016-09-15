@@ -12,7 +12,7 @@ var TnxBtn = (function (_super) {
     }
     TnxBtn.prototype.render = function () {
         return (React.createElement("span", null, 
-            React.createElement("button", {className: "btn", id: "tnx-btn"}, "thanks")
+            React.createElement("button", {className: "btn", id: "tnx-btn", onClick: this.props.func}, "thanks")
         ));
     };
     return TnxBtn;
