@@ -27,16 +27,13 @@ export class Card extends React.Component<CardProps, {}> {
     render() {
         return (
           <div>
-            <div>
-              <img className="back-img" src={this.props.backimg} />
-              <article className="backcard-contents">
-              {this.props.precardname}:{this.props.precardage}:{this.props.precardpref}
-              </article>
-            </div>
+
             <div className={"front-img " + this.props.class} >
               <img src={this.props.frontimg}/>
               <article className="card-contents">
-                {this.props.cardname}:{this.props.cardage}:{this.props.cardpref}
+                <p id="main-detail">{this.props.cardname}:{this.props.cardage}:{this.props.cardpref}</p>
+                <p id="massage">{this.props.cardmsg}</p>
+                <p id="more-detail">{this.props.cardjob}&nbsp;&nbsp;|&nbsp;&nbsp;{this.props.cardheight}</p>
               </article>
             </div>
           </div>

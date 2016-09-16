@@ -12,22 +12,21 @@ var Card = (function (_super) {
     }
     Card.prototype.render = function () {
         return (React.createElement("div", null, 
-            React.createElement("div", null, 
-                React.createElement("img", {className: "back-img", src: this.props.backimg}), 
-                React.createElement("article", {className: "backcard-contents"}, 
-                    this.props.precardname, 
-                    ":", 
-                    this.props.precardage, 
-                    ":", 
-                    this.props.precardpref)), 
             React.createElement("div", {className: "front-img " + this.props.class}, 
                 React.createElement("img", {src: this.props.frontimg}), 
                 React.createElement("article", {className: "card-contents"}, 
-                    this.props.cardname, 
-                    ":", 
-                    this.props.cardage, 
-                    ":", 
-                    this.props.cardpref))));
+                    React.createElement("p", {id: "main-detail"}, 
+                        this.props.cardname, 
+                        ":", 
+                        this.props.cardage, 
+                        ":", 
+                        this.props.cardpref), 
+                    React.createElement("p", {id: "massage"}, this.props.cardmsg), 
+                    React.createElement("p", {id: "more-detail"}, 
+                        this.props.cardjob, 
+                        "  |  ", 
+                        this.props.cardheight)))
+        ));
     };
     return Card;
 }(React.Component));

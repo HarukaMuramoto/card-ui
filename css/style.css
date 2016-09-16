@@ -10,7 +10,10 @@ html {
   text-align: center;
   margin-top: 10%;
 }
-
+p {
+  margin: 0;
+  padding: 0;
+}
 img {
   width: 350px;
   height: 350px;
@@ -56,7 +59,7 @@ main {
 .front-img {
   position: relative;
   text-align: center;
-  top: -40px;
+  top: -20px;
 }
 @keyframes left {
   0% {
@@ -89,18 +92,22 @@ main {
 }
 
 .card-contents {
+  padding-left: 20px;
+  text-align: left;
   position: relative;
-  top: -44px;
+  top: -54px;
   right: -5px;
-  width: 350px;
-  height: 40px;
+  width: 330px;
+  height: 20px;
   background-color: rgba(152, 147, 140, 0.68);
 }
 .backcard-contents {
+  padding-left: 20px;
+  text-align: left;
   position: relative;
-  top: 310px;
+  top: 300px;
   right: -5px;
-  width: 350px;
-  height: 40px;
+  width: 330px;
+  height: 20px;
   background-color: rgba(152, 147, 140, 0.68);
 }
