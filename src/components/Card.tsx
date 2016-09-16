@@ -31,9 +31,11 @@ export class Card extends React.Component<CardProps, {}> {
             <div className={"front-img " + this.props.class} >
               <img src={this.props.frontimg}/>
               <article className="card-contents">
-                <p id="main-detail">{this.props.cardname}:{this.props.cardage}:{this.props.cardpref}</p>
-                <p id="massage">{this.props.cardmsg}</p>
-                <p id="more-detail">{this.props.cardjob}&nbsp;&nbsp;|&nbsp;&nbsp;{this.props.cardheight}</p>
+              <div className="upper-txt">
+                <p className="main-detail">{this.props.cardname}:{this.props.cardage}:{this.props.cardpref}</p>
+                <p className="massage">{this.props.cardmsg}</p>
+                </div>
+                <p className="more-detail">{this.props.cardjob}&nbsp;&nbsp;|&nbsp;&nbsp;{this.props.cardheight}</p>
               </article>
             </div>
           </div>
